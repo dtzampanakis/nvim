@@ -1,0 +1,19 @@
+DEBUG:asyncio:Using selector: EpollSelector
+INFO:pygls.feature_manager:Registered builtin feature exit
+INFO:pygls.feature_manager:Registered builtin feature initialize
+INFO:pygls.feature_manager:Registered builtin feature initialized
+INFO:pygls.feature_manager:Registered builtin feature $/setTrace
+INFO:pygls.feature_manager:Registered builtin feature shutdown
+INFO:pygls.feature_manager:Registered builtin feature textDocument/didChange
+INFO:pygls.feature_manager:Registered builtin feature textDocument/didClose
+INFO:pygls.feature_manager:Registered builtin feature textDocument/didOpen
+INFO:pygls.feature_manager:Registered builtin feature workspace/didChangeWorkspaceFolders
+INFO:pygls.feature_manager:Registered builtin feature workspace/executeCommand
+INFO:pygls.feature_manager:Registered "textDocument/completion" with options "work_done_progress=None trigger_characters=['-', '.'] all_commit_characters=None resolve_provider=None"
+INFO:pygls.feature_manager:Registered "textDocument/definition" with options "None"
+INFO:pygls.feature_manager:Registered "textDocument/didChange" with options "None"
+INFO:pygls.feature_manager:Registered "textDocument/didClose" with options "None"
+INFO:pygls.feature_manager:Registered "textDocument/didOpen" with options "None"
+INFO:pygls.feature_manager:Registered "textDocument/documentSymbol" with options "None"
+INFO:pygls.server:Starting IO server
+INFO:pygls.server:Shutting down the server
