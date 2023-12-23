@@ -15,7 +15,7 @@ local config = function()
 			"markdown",
 			"json",
 			"javascript",
-			"typescript",
+			-- "typescript",
 			"yaml",
 			"html",
 			"css",

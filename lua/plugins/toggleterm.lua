@@ -3,6 +3,10 @@ return {
   version = "*",
   lazy = false,
   config = function()
+    vim.cmd([[hi NvimTreeNormal ctermbg=0 guibg=NONE ]])
+		vim.cmd([[hi Normal guibg=0 cterm=NONE]])
+		vim.cmd([[hi NormalNC guibg=0 cterm=NONE]])
+		vim.cmd([[hi NonText guibg=0 cterm=NONE]])
     require("toggleterm").setup({
       size = 20,
       open_mapping = [[<c-\>]],

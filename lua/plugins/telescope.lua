@@ -2,6 +2,8 @@ local keymap = vim.keymap
 
 local config = function()
 	local telescope = require("telescope")
+ 	local project_actions = require("telescope._extensions.project.actions")
+
 	telescope.setup({
 		defaults = {
 			mappings = {
@@ -12,28 +14,40 @@ local config = function()
 			},
 		},
 		pickers = {
-			find_files = {
-				theme = "dropdown",
-				previewer = false,
-				hidden = true,
-			},
-			live_grep = {
-				theme = "dropdown",
-				previewer = false,
-			},
 			buffers = {
 				theme = "dropdown",
 				previewer = false,
 			},
 		},
+		extensions = {
+			project = {
+				base_dirs = {
+					"~/projects",
+				},
+				hidden_files = false,
+				theme = "dropdown",
+				order_by = "recent",
+				search_by = "title",
+        on_project_selected = function(prompt_bufnr)
+          project_actions.change_working_directory(prompt_bufnr)
+          vim.cmd("%bw!")
+          vim.cmd("edit .")
+        end,
+			},
+		},
 	})
+	telescope.load_extension("project")
 end
 
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.3",
 	lazy = false,
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-telescope/telescope-project.nvim",
+		"nvim-tree/nvim-web-devicons",
+	},
 	config = config,
 	keys = {
 		keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),

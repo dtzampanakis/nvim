@@ -11,9 +11,6 @@ keymap.set("n", "<C-j>", "<C-w>j", opts) --Navigate Down
 keymap.set("n", "<C-k>", "<C-w>k", opts) --Navigate Up
 keymap.set("n", "<C-l>", "<C-w>l", opts) --Navigate Right
 
--- vim.api.nvim_set_keymap("n", "<S-h>", ":bp<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<S-l>", ":bn<CR>", { noremap = true, silent = true })
-
 -- Windows Navigation
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertically
 keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontally
@@ -31,6 +28,9 @@ vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("n", "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", { noremap = true })
 
+-- Alpha
+vim.api.nvim_set_keymap("n", "<leader>aa", "<cmd>Alpha<cr>", { noremap = true })
+
 -- Scroll buffers
 vim.api.nvim_set_keymap("n", "<S-l>", ":bnext<CR>", opts)
 vim.api.nvim_set_keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -40,3 +40,10 @@ vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+
+
+-- Disable yanking for "x" in normal mode
+vim.api.nvim_set_keymap('n', 'x', '"_x', { noremap = true, silent = true })
+
+-- Disable yanking for "x" in visual mode
+vim.api.nvim_set_keymap('x', 'x', '"_x', { noremap = true, silent = true })
