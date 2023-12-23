@@ -15,7 +15,7 @@ local config = function()
 			"markdown",
 			"json",
 			"javascript",
-			-- "typescript",
+			"typescript",
 			"yaml",
 			"html",
 			"css",
@@ -47,7 +47,7 @@ end
 
 vim.api.nvim_exec(
 	[[
-    autocmd BufNewFile,BufRead *.j2 setfiletype jinja.html
+    autocmd BufNewFile,BufRead *.j2 setfiletype jinja.html 
     autocmd BufNewFile,BufRead *.sls setfiletype sls |set syntax=sls.yaml
 
 ]],

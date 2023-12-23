@@ -22,7 +22,7 @@ local config = function()
 		extensions = {
 			project = {
 				base_dirs = {
-					"~/projects",
+          {"~/projects", max_depth = 5},
 				},
 				hidden_files = false,
 				theme = "dropdown",
