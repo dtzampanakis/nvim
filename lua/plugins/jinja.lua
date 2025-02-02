@@ -4,6 +4,6 @@ return {
     lazy = false,
   },
   {
-    'BufRead,BufNewFile *.jinja setfiletype jinja',
+    -- 'BufRead,BufNewFile *.jinja setfiletype jinja',
   },
 }

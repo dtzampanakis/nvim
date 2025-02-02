@@ -10,6 +10,7 @@ local config = function()
 				i = {
 					["<C-j>"] = "move_selection_next",
 					["<C-k>"] = "move_selection_previous",
+          ['<c-d>'] = require('telescope.actions').delete_buffer
 				},
 			},
 		},
@@ -55,6 +56,6 @@ return {
 		keymap.set("n", "<leader>ff", ":Telescope find_files<CR>"),
 		keymap.set("n", "<leader>fa", ":Telescope <CR>"),
 		keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>"),
-		keymap.set("n", "<leader>fb", ":Telescope buffers<CR>"),
+		keymap.set("n", "<leader>fd", ":Telescope buffers<CR>"),
 	},
 }
