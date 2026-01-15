@@ -42,13 +42,6 @@ local config = function()
 		filetypes = { "json", "jsonc" },
 	})
 
-	-- salt
-	lspconfig.salt_ls.setup({
-		capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { "sls" },
-	})
-
 	-- terraform
 	lspconfig.terraformls.setup({
 		capabilities = capabilities,
@@ -153,7 +146,6 @@ local config = function()
 			"solidity",
 			"html",
 			"css",
-			"salt",
 			"sls",
 		},
 		init_options = {

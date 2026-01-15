@@ -7,7 +7,6 @@ local opts = {
 		"cssls",
 		"jsonls",
 		"terraformls",
-		"salt_ls",
 		"lua_ls",
 	},
 
